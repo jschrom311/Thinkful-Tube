@@ -18,12 +18,12 @@ function displayData(results) {
         html +='<iframe src="https://www.youtube.com/embed/' + item.id.videoId + '" frameborder="0" allowfullscreen></iframe>'
         //$('.search-results').append(html);//
     }
-    $('.search-results').html(html)
+    $('.js-search-results').html(html)
 }
 
 $("form").submit(function(event){
     event.preventDefault();
     //$('.search-results').html('')//
-    let query = $("input.user-search-input").val()
+    let query = $("input").val()
     getDataFromApi(query, displayData);
 });
